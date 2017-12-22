@@ -1,0 +1,81 @@
+.Notification {
+    position: fixed;
+    top: 80px;
+    right: .6rem;
+    z-index: 1000;
+    width: 350px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.Notification__item {
+    display: flex;
+    background: #007bff;
+    height: 4.3rem;
+    color: white;
+    font-weight: 300;
+    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.Notification__item.transition-enter {
+    animation: PlatformNotificationAppear 1s;
+}
+
+.Notification__item.transition-exit {
+    animation: PlatformNotificationLeave 1s;
+}
+
+@keyframes PlatformNotificationLeave {
+    0% {
+        left: 0;
+        opacity: 1;
+        height: 4.3rem;
+    }
+
+    40% {
+        opacity: 0;
+        left: 120%;
+        height: 4.3rem;
+        margin-bottom: 1rem;
+    }
+
+    50% {
+        left: 120%;
+        height: 0;
+        margin-bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        left: 120%;
+        height: 0;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+@keyframes PlatformNotificationAppear {
+    0% {
+        opacity: 0;
+        left: 110%;
+    }
+
+    10% {
+        left: 110%;
+    }
+
+    50% {
+        opacity: 1;
+        left: 0;
+    }
+}

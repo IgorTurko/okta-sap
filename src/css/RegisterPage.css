@@ -1,0 +1,11 @@
+.Form__fromControl {
+    margin-bottom: 1.5rem;
+ }
+
+.Form__fromControl.invalid input {
+    border-color: red;
+}
+
+.Form__invalid {
+    color: red;
+}

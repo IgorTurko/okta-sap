@@ -1,0 +1,27 @@
+.Master {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #eeeeee;
+}
+
+.Master__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem;
+}
+
+.Master__button {
+    cursor: pointer;
+    margin-right: 1rem
+}
+
+.Master__button a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+.invalid-feedback {
+    display: block !important;
+}
